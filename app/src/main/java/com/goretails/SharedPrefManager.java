@@ -24,14 +24,10 @@ public class SharedPrefManager {
 
 
         public void saveQuery(String query) {
-
             SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
             SharedPreferences.Editor editor = sharedPreferences.edit();
-
             editor.putString("query", query);
-
             editor.apply();
-
         }
 
     public String getQuery() {
@@ -39,4 +35,4 @@ public class SharedPrefManager {
         return sharedPreferences.getString("query", null);
     }
 
-    }
+}

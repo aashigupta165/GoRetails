@@ -8,7 +8,6 @@ import com.google.android.material.navigation.NavigationView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.widget.SearchView;
-import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
@@ -21,8 +20,7 @@ import androidx.appcompat.widget.Toolbar;
 public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
-Fragment fragment;
-SearchView searchView;
+    SearchView searchView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,8 +28,9 @@ SearchView searchView;
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
+
         NavigationView navigationView = findViewById(R.id.nav_view);
         mAppBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.nav_home, R.id.nav_account, R.id.nav_shop, R.id.nav_fruits, R.id.nav_vegetables, R.id.nav_grocery, R.id.nav_dairy_products,
@@ -53,12 +52,6 @@ SearchView searchView;
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
-//                Bundle bundle = new Bundle();
-//                bundle.putString("query", query);
-//                searchBar searchBar = new searchBar();
-//                searchBar.setArguments(bundle);
-//                viewModel viewModel = new viewModel();
-//                viewModel.filterData(query);
                 SharedPrefManager.getInstance(MainActivity.this)
                         .saveQuery(query);
                 searchBar searchBar = new searchBar();
@@ -70,8 +63,6 @@ SearchView searchView;
 
             @Override
             public boolean onQueryTextChange(String newText) {
-//                searchBar searchBar = new searchBar();
-
                 return false;
             }
         });
@@ -82,7 +73,6 @@ SearchView searchView;
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
             case R.id.search_bar:
-
                 break;
 
             case R.id.reset:
@@ -106,14 +96,4 @@ SearchView searchView;
                 || super.onSupportNavigateUp();
     }
 
-//    public boolean onOptionsItemSelected(MenuItem item){
-//        int id = item.getItemId();
-//        if (id == R.id.reset){
-//
-//        }
-//        else if (id == R.id.search_bar){
-//
-//        }
-//        return true;
-//    }
 }

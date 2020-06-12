@@ -22,21 +22,8 @@ public class searchBar extends Fragment {
         WebSettings webSettings = webView.getSettings();
         webSettings.setJavaScriptEnabled(true);
         webView.setWebViewClient(new WebViewClient());
-//        Bundle bundle = getArguments();
-//        String query = bundle.getString("query");
         String query = SharedPrefManager.getInstance(getActivity()).getQuery();
         webView.loadUrl("http://goretails.in/product/"+query+"/");
-//        @override fun onActivityCreated(savedInstanceState: Bundle?) {
-//            super.onActivityCreated(savedInstanceState)
-//
-//
-//            viewModel.getSearchResults().observe(this, { searchResults->
-//                    Log.w("onActivityCreated()", "new search list received :" +searchResults)
-//                    mAdapter.updateList(searchResults)
-//                    listItemsAdapter.notifyDataSetChanged()
-//            });
-//
-//        }
         return view;
     }
 }

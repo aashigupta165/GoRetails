@@ -22,7 +22,7 @@ public class AccountFragment extends Fragment {
         WebSettings webSettings = webView.getSettings();
         webSettings.setJavaScriptEnabled(true);
         webView.setWebViewClient(new WebViewClient());
-        webView.loadUrl("http://goretails.in/");
+        webView.loadUrl("http://goretails.in/cart/");
         return view;
     }
 
