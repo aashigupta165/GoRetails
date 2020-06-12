@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/nav_home"
-        android:name="com.goretails.ui.home.HomeFragment"
+        android:name="com.goretails.HomeFragment"
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home">
 
@@ -30,14 +30,44 @@
     </fragment>
 
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.goretails.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
+        android:id="@+id/nav_account"
+        android:name="com.goretails.AccountFragment"
+        android:label="@string/menu_account"
+        tools:layout="@layout/fragment_account" />
 
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.goretails.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        android:id="@+id/nav_shop"
+        android:name="com.goretails.ShopFragment"
+        android:label="@string/menu_shop"
+        tools:layout="@layout/fragment_shop" />
+
+    <fragment
+        android:id="@+id/nav_fruits"
+        android:name="com.goretails.FruitsFragment"
+        android:label="@string/menu_fruits"
+        tools:layout="@layout/fragment_fruits" />
+
+    <fragment
+        android:id="@+id/nav_vegetables"
+        android:name="com.goretails.VegetablesFragment"
+        android:label="@string/menu_Vegetables"
+        tools:layout="@layout/fragment_vegetables" />
+
+    <fragment
+        android:id="@+id/nav_grocery"
+        android:name="com.goretails.GroceryFragment"
+        android:label="@string/menu_grocery"
+        tools:layout="@layout/fragment_grocery" />
+
+    <fragment
+        android:id="@+id/nav_dairy_products"
+        android:name="com.goretails.DairyProductsFragment"
+        android:label="@string/menu_dairy"
+        tools:layout="@layout/fragment_dairy_products" />
+
+    <fragment
+        android:id="@+id/nav_seasonal_fruits"
+        android:name="com.goretails.SeasonalFruitsFragment"
+        android:label="@string/menu_seasonal_fruits"
+        tools:layout="@layout/fragment_seasonal_fruits" />
 </navigation>
